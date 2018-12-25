@@ -42,6 +42,7 @@ function fetch (child) {
 }
 
 export function fetchIdsByType (type) {
+  console.log("FETCHING API FOR "+type)
   return api.cachedIds && api.cachedIds[type]
     ? Promise.resolve(api.cachedIds[type])
     : fetch(`${type}stories`)
